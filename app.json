@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "react-native-todo",
-    "slug": "react-native-todo",
+    "name": "To Do Task List",
+    "slug": "to-do-task-app",
+    "owner": "rich.griffiths",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.rich.griffiths.todotaskapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"

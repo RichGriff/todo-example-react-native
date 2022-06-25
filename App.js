@@ -22,10 +22,20 @@ export default function App() {
   } 
 
   const completeTask = (index, task) => {
-    Keyboard.dismiss();
     setCompletedTasks([...completedTasks, task])
     removeTask(index)
   }
+
+  const handleUndo = (index, task) => {
+    // Remove From Completed
+    let itemsCopy = [...completedTasks]
+    itemsCopy.splice(index, 1)
+    setCompletedTasks(itemsCopy)
+
+    // Add to Tasks
+    setTaskItems([...taskItems, task])
+  }
+
 
   const clearAll = () => {
     setCompletedTasks([])
@@ -57,7 +67,7 @@ export default function App() {
 
             {/* Completed Tasks */}
             {completedTasks.map((item, index) => {
-              return <Task key={index} index={index} text={item} remove={removeTask} completed={true} /> 
+              return <Task key={index} index={index} text={item} remove={removeTask} undo={handleUndo} completed={true} /> 
             })}
           </View>
         )}

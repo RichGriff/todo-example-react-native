@@ -3,15 +3,17 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { Octicons } from '@expo/vector-icons';
 import { Foundation } from '@expo/vector-icons';
 
-const Tasks = ({ text, index, remove, complete, completed}) => {
+const Tasks = ({ text, index, remove, complete, undo, completed}) => {
   return (
     <View style={styles.item}>
         {completed ? (
             <>
-                <View style={styles.itemLeft}>
-                    <Octicons style={styles.checkedIcon} name="tasklist" size={20} color="green" />
-                    <Text style={styles.completedItemText}>{text}</Text>
-                </View>
+                <TouchableOpacity onPress={() => undo(index, text)}>
+                    <View style={styles.itemLeft}>
+                        <Octicons style={styles.checkedIcon} name="tasklist" size={20} color="green" />
+                        <Text style={styles.completedItemText}>{text}</Text>
+                    </View>
+                </TouchableOpacity>
             </>
         ) : (
             <>
