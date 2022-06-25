@@ -26,7 +26,7 @@ Users should be able to:
 
 ## Screenshot
 
-![screenshot](screenshot.JPG)
+![screenshot](Screenshot.jpg)
 
 ## My process
 
