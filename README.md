@@ -26,7 +26,7 @@ Users should be able to:
 
 ## Screenshot
 
-![screenshot](Screenshot.jpg){:width="300px"}
+![screenshot](Screenshot.jpg)
 
 ## My process
 
